@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.junit;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -41,9 +41,10 @@ public class UserControllerTest {
 	@Mock
 	ObjectMapper objectMapper;
 	
+	//Junit Test
 	@ParameterizedTest
 	@MethodSource("getUserData")
-	public void createUser(UserDTO userDTO) throws JsonProcessingException, Exception {
+	public void createUserJunitTest(UserDTO userDTO) throws JsonProcessingException, Exception {
 		when(userService.createUser(userDTO)).thenReturn(user);
 		System.out.println("User Data :"+userDTO.toString());
 		ObjectMapper mapper=new ObjectMapper();
@@ -62,7 +63,10 @@ public class UserControllerTest {
 						"lastName":"Kumar",
 						"phone":1234567890,
 						"email":"raj@gmail.com",
-						"password":"ABCD"
+						"password":"ABCD",
+						"city":"Bengaluru",
+						"state":"Karnakata",
+						"pincode":560001
 					}
 				]
 				""";

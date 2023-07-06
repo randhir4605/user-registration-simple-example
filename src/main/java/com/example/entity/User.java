@@ -31,6 +31,15 @@ public class User {
 	
 	@Column(name="PASSWORD")
 	private String password;
+	
+	@Column(name="STATE")
+	private String state;
+	
+	@Column(name="CITY")
+	private String city;
+	
+	@Column(name="PINCODE")
+	private Integer pincode;
 
 	public Integer getId() {
 		return id;
@@ -78,6 +87,30 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public Integer getPincode() {
+		return pincode;
+	}
+
+	public void setPincode(Integer pincode) {
+		this.pincode = pincode;
 	}
 	
 }

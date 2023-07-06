@@ -8,6 +8,9 @@ public class UserDTO {
 	private String email;
 	private Integer phone;
 	private String password;
+	private String state;
+	private String city;
+	private Integer pincode;
 	
 	public String getFirstName() {
 		return firstName;
@@ -47,6 +50,30 @@ public class UserDTO {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public Integer getPincode() {
+		return pincode;
+	}
+
+	public void setPincode(Integer pincode) {
+		this.pincode = pincode;
 	}
 
 	@Override
